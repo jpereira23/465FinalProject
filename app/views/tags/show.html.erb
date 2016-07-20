@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Str:</strong>
+  <%= @tag.str %>
+</p>
+
+<p>
+  <strong>Like:</strong>
+  <%= @tag.like %>
+</p>
+
+<p>
+  <strong>Dislike:</strong>
+  <%= @tag.dislike %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tag.user %>
+</p>
+
+<p>
+  <strong>Article:</strong>
+  <%= @tag.article %>
+</p>
+
+<%= link_to 'Edit', edit_tag_path(@tag) %> |
+<%= link_to 'Back', tags_path %>

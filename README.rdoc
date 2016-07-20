@@ -1,0 +1,9 @@
+== README
+
+![alt tag](https://github.com/jpereira23/465/blob/master/home.png)
+![alt tag](https://github.com/jpereira23/465/blob/master/index.png)
+
+A website that projects a format for how a News outlet should be. With tags appropriatley being made by the user to more so describe the content of the article before you even read it. 
+
+
+

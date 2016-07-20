@@ -1,0 +1,180 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.well img {
+-webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease; 
+  -o-transition: all 1s ease; 
+  -ms-transition: all 1s ease; 
+  transition: all 1s ease;
+
+
+}
+
+.well img:hover {
+    -webkit-filter: blur(5px);
+}
+#thirty img, img.avatar{
+  max-width: 30px; 
+  max-height: 30px; 
+}
+
+body > .special {
+  background: url('thatsit.gif'); 
+}
+body, html { 
+  height: 100%; 
+
+  
+  background: url('sf.jpg'); 
+  background-attachment: fixed;
+  background-repeat: no-repeat; 
+  background-position: center center; 
+  min-height: 100%; 
+  background-size: 100%;
+
+}
+
+
+
+#work {
+   margin: 0; 
+  padding: 25px, 35px;
+  background: url('The-Bright-Sun-Blue-Sky-Clouds.jpg'); 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  min-height: 100%;
+  background-size: 100%; 
+}
+
+#intro 
+{
+  margin: 0; 
+}
+#table {
+display: table;
+	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+#table:before, #table:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+
+#table:after 
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+
+#header
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+#header:before, #header:after
+{
+  	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+
+}
+
+#4cm 
+{
+  position: fixed; 
+}
+#header:after 
+{
+  	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+
+}
+#hello 
+{
+   margin: 0; 
+
+  background: url('The-Bright-Sun-Blue-Sky-Clouds.jpg'); 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  min-height: 100%;
+  background-size: 100%; 
+}
+.row {display: table-row;} 
+.cell {display: table-cell;}
+
+#work2
+{
+ 
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+#work2:before, #work2:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+#work2:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+

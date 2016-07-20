@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+  <% @tag_articles.each do |article| %> 
+    <% if article.article_id == the_id %> 
+      <% @tags.each do |tag| %> 
+       <% if article.tag_id == tag.id %> 
+         <a href="#" data-toggle = "modal" data-target= "#myModal-<%= tag.str %>"> #<%= tag.str %></a>
+         <div class="modal fade" id="myModal-<%= tag.str %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+            <div class="modal-content" id="myModal-<%= tag.str %>"> 
+             <div class="modal-header" id="myModal-<%= tag.str %>"> 
+               <h1>  <font color="white">#<%= tag.str %> </font></h1> 
+             </div> 
+             <div class="modal-body" id="myModal-<%= tag.str %>"> 
+                  <% @tag_devises.each do |devices| %>
+                    
+                    <% @users.each do |user| %> 
+                     <% if devices.devise_id == user.id && devices.tag_id == tag.id %> 
+   		      <div class="well well-lg"> 
+                       <strong>User: </strong><br> 
+                         <%= image_tag(user.avatar.url, :style => "height: 30px; width: 30px;", :class => "img-circle") %> <%= user.username %><br><br>
+                          <%= link_to '<span class="glyphicon glyphicon-thumbs-up"></span>'.html_safe,{:controller => 'tags', :action => 'like',  :a_id => tag.id, :article_id => the_id} %>
+                           <%= link_to '<span class="glyphicon glyphicon-thumbs-down"></span>'.html_safe,{:controller => 'tags', :action => 'dislike',  :a_id => tag.id, :article_id => the_id} %>
+                      
+                          </div>
+                       <% break %>
+                     <% end %> 
+                    <% end %> 
+                  <% end %> 
+             </div> 
+             <div class="modal-footer" id="myModal-<%= tag.str %>"> 
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+             </div> 
+           </div> 
+          </div> 
+         </div>
+
+       <% end %>
+      <% end %>
+    <% end %> 
+  <% end %>
+
+
+<br><br><br>
+
