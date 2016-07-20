@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tag Devises</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Devise</th>
+      <th>Tag</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tag_devises.each do |tag_devise| %>
+      <tr>
+        <td><%= tag_devise.devise_id %></td>
+        <td><%= tag_devise.tag_id %></td>
+        <td><%= link_to 'Show', tag_devise %></td>
+        <td><%= link_to 'Edit', edit_tag_devise_path(tag_devise) %></td>
+        <td><%= link_to 'Destroy', tag_devise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tag devise', new_tag_devise_path %>

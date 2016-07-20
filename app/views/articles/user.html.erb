@@ -1,0 +1,43 @@
+<html> 
+<body> 
+<br><br><br>
+<div class="col-md-4"> 
+<div class="well well-lg"> 
+<div class="row"> 
+   <section class="user_info"> 
+
+
+<%= image_tag(current_user.avatar.url, class: "cheese", class: "img-circle") %> 
+
+ <%=current_user.username %> 
+  </section> 
+  </aside>
+</div> 
+</div> 
+</div>
+<div class="col-md-6">
+<div class="well well-lg"> 
+  <table> 
+  <thead colspan=2><th><%= current_user.username %>'s tags</th></thead>
+  <tbody>
+       <% @tag_devices.each do |device| %> 
+         <% @tags.each do |tag| %>  
+           <% if device.tag_id == tag.id %> 
+               <% if device.devise_id == current_user.id %> 
+		<tr> 
+                <td>#<%= tag.str %></td> 
+                <td><span class="glyphicon glyphicon-thumbs-up"></span><%= tag.like %></td>
+		</tr> 
+               <% break %> 
+               <% end %> 
+          <% end %> 
+        <% end %> 
+      <% end %> 
+    </tr> 
+  </tbody> 
+</table>  
+      
+</div> 
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  str: MyString
+  like: 1
+  dislike: 1
+  user_id: 
+  article_id: 
+
+two:
+  str: MyString
+  like: 1
+  dislike: 1
+  user_id: 
+  article_id: 

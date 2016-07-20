@@ -1,0 +1,25 @@
+<%= form_for(@tag_devise) do |f| %>
+  <% if @tag_devise.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tag_devise.errors.count, "error") %> prohibited this tag_devise from being saved:</h2>
+
+      <ul>
+      <% @tag_devise.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :devise_id %><br>
+    <%= f.number_field :devise_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tag_id %><br>
+    <%= f.number_field :tag_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

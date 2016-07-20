@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+
+<a href="#" data-toggle="modal" data-target="#myModal">View Comments</a> 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" arial-hidden="true">
+    <div class="modal-dialog"> 
+      <div class="modal-content" id="myModal"> 
+       <div class="modal-header" id="myModal"> 
+         <%= @article.title %> 
+       </div> 
+
+       <div class="modal-body" id="myModal"> 
+         <table> 
+           <thead><th>Comment</th><th>User</th></thead> 
+         <tbody> 
+         <% @comment_articles.each do |article| %> 
+           <% if article.article_id == @article.id %> 
+                
+             <% @comments.each do |comment| %> 
+               <% if article.comment_id == comment.id %> 
+                  <tr>
+                    <td><%= comment.body %> <br></td>  
+                  
+                  
+
+ 		   <% @comment_users.each do |ucomment| %> 
+        	     <% @users.each do |user| %> 
+                       <% if ucomment.user_id == user.id && ucomment.comment_id == comment.id %> 
+     		        <td> <%= user.email %> </td>  
+  		       <% break %>
+    		       <% end %> 
+  		     <% end %> 
+                  <% end%>  
+                 </tr> 
+
+               <% end %> 
+             <% end %> 
+          <% end %> 
+        <% end %> 
+              
+        <tbody> 
+       </table> 
+    </div> 
+    <div class="modal-footer" id="myModal"> 
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+    </div>
+ </div> 
+</div>

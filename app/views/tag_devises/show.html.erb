@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Devise:</strong>
+  <%= @tag_devise.devise_id %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @tag_devise.tag_id %>
+</p>
+
+<%= link_to 'Edit', edit_tag_devise_path(@tag_devise) %> |
+<%= link_to 'Back', tag_devises_path %>
